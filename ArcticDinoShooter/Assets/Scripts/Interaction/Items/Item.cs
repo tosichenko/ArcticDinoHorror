@@ -29,9 +29,12 @@ public class Item : MonoBehaviour, Iinteractable
         _rigidbody.isKinematic = true;
 
         transform.position = _toolParent.transform.position;
+
+
         transform.rotation = _toolParent.transform.rotation;
 
         transform.SetParent(_toolParent);
+      
     }
 
     public void Use()

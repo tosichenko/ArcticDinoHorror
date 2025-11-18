@@ -22,6 +22,7 @@ public class InventoryUI : MonoBehaviour
             print(slot.name);
             Destroy(slot.gameObject);
         }
+        _inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
         _items = _inventory.GetItemList();
         foreach (var item in _items)
         {

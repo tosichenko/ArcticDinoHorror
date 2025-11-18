@@ -11,6 +11,7 @@ public class DealDamage : MonoBehaviour
 
     private void MakeDamage(GameObject _Character, int _damage)
     {
+        if(_Character.GetComponent<IHealth>() != null)
         _Character.GetComponent<IHealth>().TakeDamage(_damage);
     }
 }

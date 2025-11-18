@@ -35,12 +35,14 @@ public class Inventory : MonoBehaviour
         {
             _inventoryUI.SetActive(false);
             _isInventoryOpen = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
             _inventoryUI.SetActive(true);
             _inventoryUI.GetComponentInChildren<InventoryUI>().ShowInventory();
             _isInventoryOpen = true;
+            Cursor.lockState = CursorLockMode.None;
         }
            
     }
