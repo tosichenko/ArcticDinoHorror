@@ -28,7 +28,7 @@
                     "name": "UseItem",
                     "type": "Button",
                     "id": "672d0a38-60f5-43b1-bea1-da0fc4842b42",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -46,7 +46,7 @@
                     "name": "EquipItem",
                     "type": "Button",
                     "id": "1f17b1ac-2bdd-48fd-9c13-c5af3df6a928",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -83,6 +83,15 @@
                     "type": "Button",
                     "id": "2eb54710-b8a4-4115-9055-8c72ab7fb833",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Aim",
+                    "type": "Button",
+                    "id": "809e0e0c-cefc-46d8-991a-37ff4d1dac6c",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -246,7 +255,7 @@
                 {
                     "name": "",
                     "id": "783e7cfc-9592-4aa8-ac7e-79470f5dbccd",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -328,6 +337,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "EquipItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90de74d1-e851-4606-9daf-be0a3d5959af",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -20,8 +20,14 @@ public class PlayerInput : MonoBehaviour
         _input.Player.UseItem.performed += UseItem_performed;
         _input.Player.Run.canceled += Run_canceled;
         _input.Player.Run.performed += Run_performed;
+        _input.Player.Aim.performed += Aim_performed;
         _input.UI.Pause.performed += Pause_performed;
         _input.UI.OpenCloseInventory.performed += OpenCloseInventory_performed;
+    }
+
+    private void Aim_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        throw new System.NotImplementedException();
     }
 
     private void OpenCloseInventory_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)

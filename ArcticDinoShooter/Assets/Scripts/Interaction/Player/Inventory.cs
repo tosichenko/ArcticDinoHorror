@@ -29,6 +29,11 @@ public class Inventory : MonoBehaviour
         FindItem();
     }
 
+    public void Aim()
+    {
+
+    }
+
     public void OpenCloseInventory()
     {
         if (_isInventoryOpen)
