@@ -31,7 +31,15 @@ public class Inventory : MonoBehaviour
 
     public void Aim()
     {
+        if(_curentItem.GetComponent<ShootingWeapon>() != null)
+        {
+            transform.localPosition = new Vector3(0f, -0.5f, 1f);
+        }
+    }
 
+    public void StopAim()
+    {
+        transform.localPosition = new Vector3(0.5f, -0.5f, 1f);
     }
 
     public void OpenCloseInventory()
