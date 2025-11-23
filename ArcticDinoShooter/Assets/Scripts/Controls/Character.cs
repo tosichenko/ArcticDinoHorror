@@ -144,6 +144,7 @@ public class Character : MonoBehaviour, IControllable
 
     public void Jump()
     {
+        print(velocity + " try jump " + _characterController.isGrounded);
         if (_characterController.isGrounded)
         {
             velocity = _jumpHeight;

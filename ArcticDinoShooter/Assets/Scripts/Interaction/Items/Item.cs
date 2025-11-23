@@ -15,7 +15,7 @@ public class Item : MonoBehaviour, Iinteractable
         _rigidbody = GetComponent<Rigidbody>();
         _usableItem = GetComponent<Iusable>();
 
-        _rigidbody.isKinematic = true;
+        //_rigidbody.isKinematic = true;
     }
 
     public string ID
