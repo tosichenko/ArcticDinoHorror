@@ -121,7 +121,7 @@ CharacterController:
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.0001
-  m_MinMoveDistance: 0.001
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &645078721435277724
 Rigidbody:
@@ -184,7 +184,7 @@ MonoBehaviour:
   _energyToRun: 12
   _crouchHeight: 1
   _crouchTime: 0.5
-  _jumpHeight: 3
+  _jumpHeight: 5
 --- !u!114 &495063969410986861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   interactText: {fileID: 0}
   _layerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
 --- !u!1 &4639740835921438569
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 4776739441207140645}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.5, z: 1}
+  m_LocalPosition: {x: 0.72, y: -0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

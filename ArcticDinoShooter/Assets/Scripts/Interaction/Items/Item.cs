@@ -34,6 +34,8 @@ public class Item : MonoBehaviour, Iinteractable
         transform.rotation = _toolParent.transform.rotation;
 
         transform.SetParent(_toolParent);
+
+        transform.GetComponent<Collider>().enabled = false;
       
     }
 
@@ -44,6 +46,7 @@ public class Item : MonoBehaviour, Iinteractable
 
     public void Drop()
     {
+        transform.GetComponent<Collider>().enabled = true;
         transform.SetParent(null);
 
         _rigidbody.isKinematic = false;
@@ -51,6 +54,7 @@ public class Item : MonoBehaviour, Iinteractable
 
     public void Trow()
     {
+        transform.GetComponent<Collider>().enabled = true;
         transform.SetParent(null);
 
         _rigidbody.isKinematic = false;

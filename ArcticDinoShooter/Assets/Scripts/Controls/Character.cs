@@ -40,15 +40,16 @@ public class Character : MonoBehaviour, IControllable
 
     private void GravityFall()
     {
-
-        velocity += Physics.gravity.y * Time.deltaTime;
-        _characterController.Move(Vector3.up * velocity * Time.fixedDeltaTime);
-
-        if (_characterController.isGrounded)
+        if (!_characterController.isGrounded)
         {
-         
-            velocity = 0;
-           // print($"isGrounded,{velocity}");
+            velocity += Physics.gravity.y * Time.deltaTime;
+        }
+
+        _characterController.Move(Vector3.up * velocity * Time.deltaTime);
+
+        if (_characterController.isGrounded && velocity < 0)
+        {
+            velocity = -2f;
         }
     }
 
@@ -66,6 +67,7 @@ public class Character : MonoBehaviour, IControllable
         }
         else
         {
+            StopRun();
             Debug.Log("крадёмся");
             _isCrouching = true;
             StartCoroutine(SetHeight(_crouchHeight, _crouchTime));
@@ -100,7 +102,7 @@ public class Character : MonoBehaviour, IControllable
 
     public void Run()
     {
-        if (_stamina.HasEnergy())
+        if (_stamina.HasEnergy() && !_isCrouching)
         {
             //Debug.Log(_stamina.GetEnergy());
             _speed = _runSpeed;
@@ -143,13 +145,10 @@ public class Character : MonoBehaviour, IControllable
     }
 
     public void Jump()
-    {
-        print(velocity + " try jump " + _characterController.isGrounded);
+    {          
         if (_characterController.isGrounded)
         {
-            velocity = _jumpHeight;
-            print(velocity + " jumped");
+            velocity = Mathf.Sqrt(_jumpHeight * -2f * Physics.gravity.y);
         }
-       
     }
 }

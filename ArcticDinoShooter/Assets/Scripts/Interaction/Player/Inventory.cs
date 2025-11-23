@@ -77,6 +77,7 @@ public class Inventory : MonoBehaviour
         _curentItem = Instantiate(itemInfo.prefab, transform);
         _curentItem.transform.localPosition = Vector3.zero;
         _curentItem.transform.localRotation = Quaternion.identity;
+        _curentItem.GetComponent<Rigidbody>().isKinematic = true;
 
        // _curentItem.GetComponent<Item>().Equip(transform);
     }
